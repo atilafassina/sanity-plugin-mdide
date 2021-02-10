@@ -1,0 +1,29 @@
+{
+  "name": "sanity-plugin-mdide",
+  "version": "0.0.1",
+  "description": "Sanity plugin with schemas for editing Markdown with Syntax Highlighting",
+  "main": "dist/md-editor.js",
+  "scripts": {
+    "prepublishOnly": "babel -D -d dist/ src/",
+    "build": "babel -D -d dist/ src/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/atilafassina/sanity-plugin-mdide.git"
+  },
+  "author": "Atila Fassina <@AtilaFassina>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/atilafassina/sanity-plugin-mdide/issues"
+  },
+  "homepage": "https://github.com/atilafassina/sanity-plugin-mdide#readme",
+  "devDependencies": {
+    "@babel/cli": "^7.12.13",
+    "@babel/core": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-react": "^7.12.13"
+  },
+  "dependencies": {
+    "react-simplemde-editor": "^4.1.3"
+  }
+}
