@@ -1,11 +1,11 @@
 {
   "name": "sanity-plugin-mdide",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "description": "Sanity plugin with schemas for editing Markdown with Syntax Highlighting",
   "main": "dist/md-editor.js",
   "scripts": {
-    "prepublishOnly": "babel -D -d dist/ src/",
-    "build": "babel -D -d dist/ src/"
+    "build": "babel -D -d dist/ src/",
+    "prepublishOnly": "yarn build"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,7 @@
   "devDependencies": {
     "@babel/cli": "^7.12.13",
     "@babel/core": "^7.12.13",
+    "@babel/plugin-proposal-class-properties": "^7.12.13",
     "@babel/preset-env": "^7.12.13",
     "@babel/preset-react": "^7.12.13",
     "prettier": "^2.2.1"
