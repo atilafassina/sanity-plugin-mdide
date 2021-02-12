@@ -1,8 +1,11 @@
 {
+  "paths": {
+    "compiled": "./build"
+  },
   "parts": [
     {
       "implements": "part:@sanity/base/schema-type",
-      "path": "./index.js"
+      "path": "./schema-type.js"
     }
   ]
 }
