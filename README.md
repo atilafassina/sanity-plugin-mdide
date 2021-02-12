@@ -1,5 +1,5 @@
 <div align="center">
- <img src="./mdide.png" />
+ <img src="./logo.png" />
 </div>
 
 # Sanity-Plugin-MdIDE
