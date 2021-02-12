@@ -1,0 +1,303 @@
+@import 'part:@sanity/base/theme/variables-style';
+
+:global(.editor-preview-active-side),
+:global(.editor-preview-active) {
+  display: block;
+}
+
+:global(.CodeMirror-cursor) {
+  border-left-color: currentColor !important;
+}
+
+:global(.EasyMDEContainer.sided--no-fullscreen) {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+:global(.EasyMDEContainer .CodeMirror) {
+  box-sizing: border-box;
+  height: auto;
+  border: 1px solid var(--body-text);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  padding: 10px;
+  font: inherit;
+  z-index: 0;
+  word-wrap: break-word;
+  background-color: var(--body-bg);
+  color: var(--body-text);
+  transition: border-color 250ms ease-in-out;
+}
+
+:global(.EasyMDEContainer .CodeMirror:focus, .EasyMDEContainer
+    .CodeMirror:hover) {
+  border-color: var(--hairline-color);
+}
+
+:global(.EasyMDEContainer .CodeMirror-scroll) {
+  cursor: text;
+}
+
+:global(.EasyMDEContainer .CodeMirror-fullscreen) {
+  background: var(--body-bg);
+  position: fixed !important;
+  border-bottom-right-radius: 0 !important;
+  top: 50px;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: auto;
+  z-index: 9999999;
+  width: 100%;
+}
+
+:global(.EasyMDEContainer .CodeMirror-sided) {
+  width: 50% !important;
+}
+
+:global(.EasyMDEContainer .CodeMirror-sided.sided--no-fullscreen) {
+  border-right: none !important;
+  border-bottom-right-radius: 0px;
+  position: relative;
+  flex: 1 1 auto;
+}
+
+:global(.EasyMDEContainer .CodeMirror-placeholder) {
+  opacity: 0.5;
+}
+
+:global(.EasyMDEContainer .CodeMirror-focused .CodeMirror-selected) {
+  color: var(--body-bg);
+  background-color: var(--body-text);
+}
+
+:global(.editor-toolbar) {
+  position: relative;
+  user-select: none;
+  padding: 0 10px;
+  border-top: 1px solid;
+  border-left: 1px solid;
+  border-right: 1px solid;
+  border-color: var(--body-text);
+  border-top-left-radius: var(--border-radius-base);
+  border-top-right-radius: var(--border-radius-base);
+  background: var(--body-bg);
+}
+
+/* .editor-toolbar:after,
+:global(.editor-toolbar:before) {
+  display: block;
+  content: ' ';
+  height: 1px;
+}
+
+:global(.editor-toolbar:before) {
+  margin-bottom: 8px;
+}
+
+:global(.editor-toolbar:after) {
+  margin-top: 8px;
+} */
+
+:global(.editor-toolbar.fullscreen) {
+  width: 100%;
+  height: 50px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  box-sizing: border-box;
+  border: 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  opacity: 1;
+  z-index: 9999999;
+  background: var(--body-bg);
+}
+
+:global(.editor-toolbar.sided--no-fullscreen) {
+  width: 100%;
+}
+
+:global(.editor-toolbar button) {
+  display: inline-block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  color: var(--body-text);
+  background: transparent;
+  text-align: center;
+  text-decoration: none !important;
+  height: 30px;
+  width: 30px;
+  transition: color 250ms ease-in-out;
+}
+
+.editor-toolbar button.active,
+:global(.editor-toolbar button:hover) {
+  color: var(--brand-primary);
+}
+
+:global(.editor-toolbar i.separator) {
+  display: inline-block;
+  width: 0;
+  border-left: 2px solid var(--hairline-color);
+  border-right: 2px solid var(--hairline-color);
+  color: transparent;
+  text-indent: -10px;
+  margin: 0 6px;
+}
+
+:global(.editor-toolbar.disabled-for-preview button:not(.no-disable)) {
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+@media only screen and (max-width: 700px) {
+  :global(.editor-toolbar i.no-mobile) {
+    display: none;
+  }
+}
+
+:global(.editor-statusbar) {
+  padding: 8px 10px;
+  font-size: 12px;
+  color: var(--body-text);
+  text-align: right;
+}
+
+:global(.editor-statusbar.sided--no-fullscreen) {
+  width: 100%;
+}
+
+:global(.editor-statusbar span) {
+  display: inline-block;
+  min-width: 4em;
+  margin-left: 1em;
+}
+
+:global(.editor-statusbar .lines::before) {
+  content: 'lines: ';
+}
+
+:global(.editor-statusbar .words::before) {
+  content: 'words: ';
+}
+
+:global(.editor-statusbar .characters::before) {
+  content: 'characters: ';
+}
+
+:global(.editor-preview-full) {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  overflow: auto;
+  display: none;
+  box-sizing: border-box;
+  z-index: 9999999;
+}
+
+:global(.editor-preview-side) {
+  position: fixed;
+  bottom: 0;
+  width: 50%;
+  top: 50px;
+  right: 0;
+  overflow: auto;
+  display: none;
+  box-sizing: border-box;
+  word-wrap: break-word;
+  z-index: 9999999;
+}
+
+:global(.editor-preview-active-side.sided--no-fullscreen) {
+  flex: 1 1 auto;
+  height: auto;
+  position: static;
+}
+
+:global(.editor-preview) {
+  padding: 10px;
+  background: #202020;
+}
+
+:global(.editor-preview > p) {
+  margin-top: 0;
+}
+
+:global(.editor-preview pre) {
+  background: var(--body-bg);
+  border: solid 1px var(--body-text);
+  margin-bottom: 10px;
+}
+
+:global(.editor-preview table td),
+:global(.editor-preview table th) {
+  border: 1px solid var(--brand-primary);
+  padding: 5px;
+}
+
+:global(.editor-preview a),
+:global(.cm-s-easymde .cm-tag) {
+  color: var(--brand-primary);
+}
+
+:global(.cm-s-easymde .cm-string),
+:global(.cm-s-easymde .cm-attribute) {
+  color: var(--body-text);
+}
+
+:global(.cm-s-easymde .cm-header-1) {
+  font-size: 200%;
+  line-height: 200%;
+}
+
+:global(.cm-s-easymde .cm-header-2) {
+  font-size: 160%;
+  line-height: 160%;
+  color: var(--brand-primary);
+}
+
+:global(.cm-s-easymde .cm-header-3) {
+  font-size: 125%;
+  line-height: 125%;
+  color: var(--brand-primary);
+}
+
+:global(.cm-s-easymde .cm-header-4) {
+  font-size: 110%;
+  line-height: 110%;
+}
+
+:global(.cm-s-easymde .cm-link) {
+  color: #e7e3e3;
+}
+
+:global(.cm-s-easymde .cm-url) {
+  color: #7f8c8d;
+}
+
+:global(.cm-s-easymde .cm-quote) {
+  color: #7f8c8d;
+  font-style: italic;
+}
+
+:global(.editor-preview-active-side),
+:global(.editor-preview-active) {
+  display: block !important;
+}
+
+:global(.editor-preview pre) {
+  border: 0;
+  padding: 0.5em;
+}
+
+:global(.editor-preview blockquote) {
+  border-left: solid 5px var(--body-text);
+  margin: 2em 0;
+  padding: 5px 2em;
+  font-style: italic;
+}

@@ -1,18 +1,18 @@
-import React, { Component } from 'react'
-import PatchEvent, { set, unset } from 'part:@sanity/form-builder/patch-event'
-import SimpleMDE from 'react-simplemde-editor'
-import './styles.css?raw'
+import React, { Component } from 'react';
+import PatchEvent, { set, unset } from 'part:@sanity/form-builder/patch-event';
+import SimpleMDE from 'react-simplemde-editor';
+import styles from './base-styles.css';
+// import './styles.css?raw';
 
 const createPatchFrom = (value) =>
-  PatchEvent.from(value === '' ? unset() : set(value))
+  PatchEvent.from(value === '' ? unset() : set(value));
 
 class MdEditor extends Component {
   render() {
     const {
       minHeight = '500px',
       hasLineNumbers = false,
-    } = this.props.type.options
-
+    } = this.props.type.options;
     return (
       <SimpleMDE
         value={this.props.value}
@@ -22,8 +22,8 @@ class MdEditor extends Component {
           minHeight: minHeight,
         }}
       />
-    )
+    );
   }
 }
 
-export default MdEditor
+export default MdEditor;
