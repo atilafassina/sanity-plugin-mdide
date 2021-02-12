@@ -25,7 +25,7 @@
   font: inherit;
   z-index: 0;
   word-wrap: break-word;
-  background-color: var(--body-bg);
+  background-color: var(--component-bg);
   color: var(--body-text);
   transition: border-color 250ms ease-in-out;
 }
@@ -40,7 +40,7 @@
 }
 
 :global(.EasyMDEContainer .CodeMirror-fullscreen) {
-  background: var(--body-bg);
+  background: var(--component-bg);
   position: fixed !important;
   border-bottom-right-radius: 0 !important;
   top: 50px;
@@ -68,7 +68,7 @@
 }
 
 :global(.EasyMDEContainer .CodeMirror-focused .CodeMirror-selected) {
-  color: var(--body-bg);
+  color: var(--component-bg);
   background-color: var(--body-text);
 }
 
@@ -82,23 +82,8 @@
   border-color: var(--body-text);
   border-top-left-radius: var(--border-radius-base);
   border-top-right-radius: var(--border-radius-base);
-  background: var(--body-bg);
+  background: var(--component-bg);
 }
-
-/* .editor-toolbar:after,
-:global(.editor-toolbar:before) {
-  display: block;
-  content: ' ';
-  height: 1px;
-}
-
-:global(.editor-toolbar:before) {
-  margin-bottom: 8px;
-}
-
-:global(.editor-toolbar:after) {
-  margin-top: 8px;
-} */
 
 :global(.editor-toolbar.fullscreen) {
   width: 100%;
@@ -112,7 +97,7 @@
   left: 0;
   opacity: 1;
   z-index: 9999999;
-  background: var(--body-bg);
+  background: var(--component-bg);
 }
 
 :global(.editor-toolbar.sided--no-fullscreen) {
@@ -221,7 +206,7 @@
 
 :global(.editor-preview) {
   padding: 10px;
-  background: #202020;
+  background: var(--component-bg);
 }
 
 :global(.editor-preview > p) {
@@ -229,7 +214,7 @@
 }
 
 :global(.editor-preview pre) {
-  background: var(--body-bg);
+  background: var(--component-bg);
   border: solid 1px var(--body-text);
   margin-bottom: 10px;
 }
@@ -273,7 +258,7 @@
 }
 
 :global(.cm-s-easymde .cm-link) {
-  color: #e7e3e3;
+  color: var(--brand-secondary);
 }
 
 :global(.cm-s-easymde .cm-url) {
