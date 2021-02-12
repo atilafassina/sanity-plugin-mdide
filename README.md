@@ -1,3 +1,5 @@
-# sanity-plugin-mdide
+<div align="center">
+ <img src="./mdide.png" />
+</div>
 
-> WIP
+# Sanity-Plugin-MdIDE
