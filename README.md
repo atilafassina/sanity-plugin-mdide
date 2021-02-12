@@ -46,6 +46,18 @@ The list of CSS custom properties:
 - `--brand-primary`
 - `--brand-secondary`
 
+This also allows to easily adapt to any color pallete.
+
+<details>
+  <summary>Dark mode</summary>
+  <img src="./mdide-dark.png" alt="screenshot of Sanity-Plugin-MDIDE with dark colour palette">
+</details>
+
+<details>
+  <summary>Light mode</summary>
+  <img src="./mdide-light.png" alt="screenshot of Sanity-Plugin-MDIDE with dark colour palette">
+</details>
+
 ## Configuration Options 🔧
 
 Just is a very thin wrapper on top of [React SimpleMDE Editor](https://github.com/RIP21/react-simplemde-editor) and as such, it accepts every option [EasyMDE](https://github.com/Ionaru/easy-markdown-editor) supports. On your field schema, just pass an `options` object.
