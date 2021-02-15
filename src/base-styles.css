@@ -1,4 +1,5 @@
 @import 'part:@sanity/base/theme/variables-style';
+@import './inline-styles.css';
 
 :global(.editor-preview-active-side),
 :global(.editor-preview-active) {
@@ -118,7 +119,7 @@
   transition: color 250ms ease-in-out;
 }
 
-.editor-toolbar button.active,
+:global(.editor-toolbar button.active),
 :global(.editor-toolbar button:hover) {
   color: var(--brand-primary);
 }
