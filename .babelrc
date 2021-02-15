@@ -7,7 +7,8 @@
       {
         "targets": {
           "edge": "14"
-        }
+        },
+        "modules": "commonjs"
       }
     ]
   ]
