@@ -1,6 +1,6 @@
 {
   "name": "sanity-plugin-mdide",
-  "version": "1.0.1",
+  "version": "1.0.4",
   "description": "Sanity plugin with schemas for editing Markdown with Syntax Highlighting",
   "main": "dist/md-editor.js",
   "scripts": {
